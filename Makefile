@@ -1,14 +1,14 @@
 BASE_DIR := $(shell pwd)
 
 # Find the backup-utils directory within $PATH pr $HOME
+SEARCH_PATH = $(shell \
+        echo $(PATH):$(HOME) | \
+        tr ":" " " | \
+        xargs readlink -f | \
+        tr "\n" " " \
+)
 GHE_UTILS := $(shell \
-        find $( \
-                echo $$PATH:$$HOME | \
-                tr ":" " " | \
-                xargs readlink -f | \
-                tr "\n" " " \
-        ) \
-        -type d -name backup-utils -print -quit \
+        find $(SEARCH_PATH) -type d -name backup-utils -print -quit \
 )
 AWS_CLI := $(shell command -v aws 2>/dev/null)
 
