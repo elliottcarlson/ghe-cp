@@ -8,16 +8,16 @@ status of the backup.
 
 You will need the following installed and configured  on your backup machine:
 
-    * [GitHub Enterprise Backup Utilities](https://github.com/github/backup-utils)
-    * [AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
+* [GitHub Enterprise Backup Utilities](https://github.com/github/backup-utils)
+* [AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/installing.html)
 
 Additionally, you will need to set up an incoming Webhook on your Slack instance:
 
-    * [Incoming Webhooks](https://my.slack.com/services/new/incoming-webhook/)
+* [Incoming Webhooks](https://my.slack.com/services/new/incoming-webhook/)
 
 ## Install
 
-```sh
+```
 $ git clone https://github.com/elliottcarlson/ghe-make-backup
 $ cd ghe-make-backup
 $ make
